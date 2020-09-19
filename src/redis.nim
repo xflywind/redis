@@ -778,8 +778,7 @@ proc lLPush*(r: Redis | AsyncRedis, key: string, values: seq[string], create: bo
   result = await r.readInteger()
 
 proc lRange*(r: Redis | AsyncRedis, key: string, start, stop: int): Future[RedisList] {.multisync.} =
-  ## Get a range of elements from a list. Returns `nil` when `key`
-  ## doesn't exist.
+  ## Get a range of elements from a list.
   await r.sendCommand("LRANGE", key, @[$start, $stop])
   result = await r.readArray()
 
