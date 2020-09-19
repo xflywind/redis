@@ -12,8 +12,7 @@
 ## redis-server instance, send commands and receive replies.
 ##
 ## **Beware**: Most (if not all) functions that return a ``RedisString`` may
-## return ``redisNil``, and functions which return a ``RedisList``
-## may return ``nil``.
+## return ``redisNil``.
 ##
 ## Example
 ## --------
